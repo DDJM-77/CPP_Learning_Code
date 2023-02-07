@@ -23,9 +23,15 @@ Test create_test(int value)
     return result;
 }
 
+Test create_test_double(int value)
+{
+    Test result = create_test(2 * value);
+    return result;
+}
+
 int main()
 {
-    Test test = create_test(3);
+    Test test = create_test_double(3);
     std::cout << test.value << std::endl;
 
     return 0;
