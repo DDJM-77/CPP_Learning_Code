@@ -1,19 +1,14 @@
 #include "Intern.h"
 
+#include "Rank.h"
+
 #include <cstdio>
 #include <random>
 
 Intern::Intern(std::string_view name, std::string_view surname, unsigned int salary, bool is_clumsy)
-    : _name { name }
-    , _surname { surname }
-    , _salary { salary }
+    : Employee { name, surname, salary, Rank::Slave }
     , _is_clumsy { is_clumsy }
 {}
-
-void Intern::increase_salary(unsigned int raise)
-{
-    _salary += raise;
-}
 
 void Intern::fetch_coffee()
 {
